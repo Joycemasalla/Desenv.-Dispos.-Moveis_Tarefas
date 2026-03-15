@@ -51,3 +51,13 @@ Para este projeto, foi utilizada uma arquitetura baseada no padrão **MVVM (Mode
    # Para Web
    npm run web
    ```
+
+
+## 👨‍💻 Autor
+
+Joyce Masalla
+
+## 👨‍🏫 Professor
+
+Thiago Goldoni Thomé
+(thiago.thome@professor.faminas.edu.br)
