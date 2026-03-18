@@ -7,6 +7,11 @@ export function ControladoraViewModel() {
     const [nome, setNome] = useState("");
     const [descricao, setDescricao] = useState("");
     const [listaEntidades, setListaEntidades] = useState<Entidade[]>([]); //cria a lista de entidades vazia
+    const [modalVisivel, setModalVisivel] = useState(false);
+
+    function fecharModal() {
+        setModalVisivel(false);
+    }
 
     //clicou no botão -> ViewModel chama Business -> Business adiciona entidade -> ViewModel atualiza lista -> Aparece na tela
     function adicionar() {
@@ -25,8 +30,9 @@ export function ControladoraViewModel() {
         try {
             const novaLista = RegrasDaEntidade.deletarEntidade(id);
             setListaEntidades(novaLista);
-            alert("Entidade deletada com sucesso!");
-            
+            setModalVisivel(true);
+            //alert("Entidade deletada com sucesso!");
+
         } catch (error: any) {
             alert(error.message);
         }
@@ -39,7 +45,9 @@ export function ControladoraViewModel() {
         setDescricao,
         listaEntidades,
         adicionar,
-        deletar
+        deletar,
+        modalVisivel,
+        fecharModal
     };
 
 

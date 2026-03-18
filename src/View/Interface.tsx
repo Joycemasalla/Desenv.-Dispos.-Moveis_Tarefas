@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Button, TextInput, Text, FlatList, TouchableOpacity } from "react-native";
+import { View, Button, TextInput, Text, FlatList, TouchableOpacity, Modal } from "react-native";
 import { ControladoraViewModel } from "../viewModel/Controladora";
 import styles from "../styles/Styles";
 import { MaterialIcons } from '@expo/vector-icons';
@@ -43,15 +43,34 @@ export function Interface() {
                             <Text style={styles.itemTitle}>{item.nome}</Text>
                             <Text style={styles.itemDesc}>{item.descricao}</Text>
                         </View>
-                        
+
                         <TouchableOpacity
                             style={styles.deleteButton}
                             onPress={() => viewModel.deletar(item.id)}>
                             <MaterialIcons name="delete" size={24} color="#E74C3C" />
                         </TouchableOpacity>
+
+
                     </View>
                 )}
             />
+            <Modal
+                visible={viewModel.modalVisivel}
+                onRequestClose={viewModel.fecharModal}
+                transparent={true} // Permite ver a tela original no fundo
+                animationType="fade" // Efeito suave de aparecimento
+            >
+                <View style={styles.modalContainer}>
+                    <View style={styles.modalContent}>
+                        <Text style={styles.modalText}>Entidade deletada com sucesso!</Text>
+                        <Button
+                            title="Fechar"
+                            onPress={viewModel.fecharModal}
+                            color="#7437d4e3"
+                        />
+                    </View>
+                </View>
+            </Modal>
         </View>
     )
 }
