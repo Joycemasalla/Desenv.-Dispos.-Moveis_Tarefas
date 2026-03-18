@@ -27,4 +27,9 @@ export class RegrasDaEntidade{
             throw new Error("O nome já existe na lista");
         }
     }
+
+    static deletarEntidade (idDeletado: number) {
+        this.listaEntidadesEstatica = this.listaEntidadesEstatica.filter(entidade => entidade.id !== idDeletado);
+        return this.listaEntidadesEstatica;
+    }
 }

@@ -19,6 +19,18 @@ export function ControladoraViewModel() {
             alert(error.message);
         }
     }
+    //Chamar o deletarEntidade do Business passando o id
+    //Atualizar o estado da lista com o resultado
+    function deletar(id: number) {
+        try {
+            const novaLista = RegrasDaEntidade.deletarEntidade(id);
+            setListaEntidades(novaLista);
+            alert("Entidade deletada com sucesso!");
+            
+        } catch (error: any) {
+            alert(error.message);
+        }
+    }
 
     return {
         nome,
@@ -26,6 +38,9 @@ export function ControladoraViewModel() {
         descricao,
         setDescricao,
         listaEntidades,
-        adicionar
+        adicionar,
+        deletar
     };
+
+
 }

@@ -1,6 +1,8 @@
 import React from "react";
-import { View, Button, TextInput, Text, FlatList, StyleSheet } from "react-native";
+import { View, Button, TextInput, Text, FlatList, TouchableOpacity } from "react-native";
 import { ControladoraViewModel } from "../viewModel/Controladora";
+import styles from "../styles/Styles";
+import { MaterialIcons } from '@expo/vector-icons';
 
 export function Interface() {
     const viewModel = ControladoraViewModel();
@@ -37,58 +39,19 @@ export function Interface() {
                 contentContainerStyle={styles.list}
                 renderItem={({ item }) => (
                     <View style={styles.listItem}>
-                        <Text style={styles.itemTitle}>{item.nome}</Text>
-                        <Text style={styles.itemDesc}>{item.descricao}</Text>
+                        <View style={styles.itemTextContainer}>
+                            <Text style={styles.itemTitle}>{item.nome}</Text>
+                            <Text style={styles.itemDesc}>{item.descricao}</Text>
+                        </View>
+                        
+                        <TouchableOpacity
+                            style={styles.deleteButton}
+                            onPress={() => viewModel.deletar(item.id)}>
+                            <MaterialIcons name="delete" size={24} color="#E74C3C" />
+                        </TouchableOpacity>
                     </View>
                 )}
             />
         </View>
     )
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#f2f2f2",
-        padding: 16,
-    },
-    header: {
-        fontSize: 24,
-        fontWeight: "bold",
-        marginBottom: 12,
-        textAlign: "center",
-        color: "#333",
-    },
-    input: {
-        padding: 10,
-        borderWidth: 1,
-        borderColor: "#ccc",
-        borderRadius: 4,
-        backgroundColor: "#fff",
-    },
-    inputLast: {
-        marginTop: 8,
-        marginBottom: 12,
-    },
-    buttonWrapper: {
-        marginBottom: 16,
-    },
-    list: {
-        paddingBottom: 20,
-    },
-    listItem: {
-        padding: 12,
-        borderBottomWidth: 1,
-        borderBottomColor: "#ccc",
-        backgroundColor: "#fff",
-        borderRadius: 4,
-        marginBottom: 8,
-    },
-    itemTitle: {
-        fontSize: 18,
-        fontWeight: "600",
-    },
-    itemDesc: {
-        color: "#666",
-    },
-});
