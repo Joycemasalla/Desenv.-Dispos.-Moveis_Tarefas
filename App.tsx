@@ -1,12 +1,11 @@
-import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-import { Interface } from './src/view/Interface';
+import { NavigationContainer } from "@react-navigation/native";
+import { Navigator } from './src/navigation/Navigator';
+
 
 export default function App() {
   return (
-    <SafeAreaProvider>
-      <SafeAreaView style={{ flex: 1 }}>
-        <Interface />
-      </SafeAreaView>
-    </SafeAreaProvider>
+    <NavigationContainer>
+      <Navigator />
+    </NavigationContainer>
   )
 }
