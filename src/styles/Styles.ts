@@ -4,15 +4,22 @@ const styles = StyleSheet.create({
     container: {
         flex: 1, // Preenche toda a tela
         backgroundColor: "#F8F9FA",
-        paddingTop: 60, 
+        paddingTop: 20, 
         paddingHorizontal: 20,
     },
     header: {
-        fontSize: 28,
+        fontSize: 32,
         fontWeight: "bold",
-        color: "#333333",
+        color: "#7437d4e3",
         textAlign: "center",
-        marginBottom: 24,
+        marginBottom: 10,
+    },
+    addTitleContainer:{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        marginBottom: 10,
+        paddingTop: 10,
     },
     input: {
         backgroundColor: "#FFFFFF",
@@ -28,6 +35,7 @@ const styles = StyleSheet.create({
     },
     buttonWrapper: {
         marginBottom: 30,
+        alignItems: 'center',
     },
     list: {
         paddingBottom: 20,
@@ -86,7 +94,7 @@ const styles = StyleSheet.create({
     modalText: {
         marginBottom: 15,
         fontSize: 16,
-        textAlign: "center",
+        textAlign: "center"    
     }
 });
 
