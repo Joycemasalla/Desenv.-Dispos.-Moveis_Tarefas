@@ -8,7 +8,7 @@ export function FormularioScreen() {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.header}>Minha Lista</Text>
+            <Text style={styles.header}>Nova Entidade</Text>
 
             <TextInput
                 placeholder="Digite uma nova entidade para a lista"
@@ -23,11 +23,13 @@ export function FormularioScreen() {
                 onChangeText={viewModel.setDescricao} />
 
             <View style={styles.buttonWrapper}>
-                <Button
-                    title="Adicionar"
-                    color="#C8A2C8"
-                    onPress={viewModel.adicionar}
-                />
+                <View style={{width: '50%'}}>
+                    <Button
+                        title="Adicionar"
+                        color="#C8A2C8"
+                        onPress={viewModel.adicionar}
+                    />
+                </View>
             </View>
         </View>
     )

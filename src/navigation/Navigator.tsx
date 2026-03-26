@@ -1,8 +1,8 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { ListaScreen } from '../view/ListaScreen';
-import { FormularioScreen } from '../view/FormularioScreen';
+import { ListaScreen } from '../View/ListaScreen';
+import { FormularioScreen } from '../View/FormularioScreen';
 
-type RootStackParams = {
+export type RootStackParams = {
     Lista: undefined;
     Formulario: undefined;
 };
