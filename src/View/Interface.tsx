@@ -26,11 +26,13 @@
 //                 onChangeText={viewModel.setDescricao} />
 
 //             <View style={styles.buttonWrapper}>
-//                 <Button
-//                     title="Adicionar"
-//                     color="#C8A2C8"
-//                     onPress={viewModel.adicionar}
-//                 />
+//                 <View style={{width: '50%'}}>
+//                     <Button
+//                         title="Adicionar"
+//                         color="#C8A2C8"
+//                         onPress={viewModel.adicionar}
+//                     />
+//                 </View>
 //             </View>
 
 //             <FlatList

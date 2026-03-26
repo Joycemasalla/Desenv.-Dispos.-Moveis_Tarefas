@@ -75,7 +75,7 @@ export function ListaScreen() {
                 </View>
             </Modal>
             <View style={styles.addTitleContainer}>
-                <View style={{width: "50%"}}>
+                <View style={{ width: "50%" }}>
                     <Button
                         title="Adicionar"
                         color="#C8A2C8"

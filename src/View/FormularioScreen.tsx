@@ -23,7 +23,7 @@ export function FormularioScreen() {
                 onChangeText={viewModel.setDescricao} />
 
             <View style={styles.buttonWrapper}>
-                <View style={{width: '50%'}}>
+                <View style={{ width: '50%' }}>
                     <Button
                         title="Adicionar"
                         color="#C8A2C8"
