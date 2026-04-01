@@ -4,22 +4,15 @@ const styles = StyleSheet.create({
     container: {
         flex: 1, // Preenche toda a tela
         backgroundColor: "#F8F9FA",
-        paddingTop: 20,
+        paddingTop: 60, 
         paddingHorizontal: 20,
     },
     header: {
-        fontSize: 32,
+        fontSize: 28,
         fontWeight: "bold",
-        color: "#7437d4e3",
+        color: "#292626",
         textAlign: "center",
-        marginBottom: 10,
-    },
-    addTitleContainer: {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        marginBottom: 10,
-        paddingTop: 10,
+        marginBottom: 24,
     },
     input: {
         backgroundColor: "#FFFFFF",
@@ -35,7 +28,6 @@ const styles = StyleSheet.create({
     },
     buttonWrapper: {
         marginBottom: 30,
-        alignItems: 'center',
     },
     list: {
         paddingBottom: 20,
@@ -45,9 +37,9 @@ const styles = StyleSheet.create({
         padding: 16,
         borderRadius: 10,
         marginBottom: 12,
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
+        flexDirection: "row", 
+        justifyContent: "space-between", 
+        alignItems: "center", 
         elevation: 3,
         shadowColor: "#000",
         shadowOffset: { width: 0, height: 2 },
@@ -55,7 +47,7 @@ const styles = StyleSheet.create({
         shadowRadius: 4,
     },
     itemTextContainer: {
-        flex: 1,
+        flex: 1, 
         marginRight: 12,
     },
     itemTitle: {
@@ -75,18 +67,18 @@ const styles = StyleSheet.create({
     },
     modalContainer: {
         flex: 1,
-        justifyContent: "center",
+        justifyContent: "center", 
         alignItems: "center",
-        backgroundColor: "rgba(0, 0, 0, 0.5)",
+        backgroundColor: "rgba(0, 0, 0, 0.5)", 
     },
     modalContent: {
-        width: "80%",
+        width: "80%", 
         backgroundColor: "white",
-        padding: 24,
-        borderRadius: 20,
+        padding: 24, 
+        borderRadius: 20, 
         alignItems: "center",
-        elevation: 5,
-        shadowColor: "#000",
+        elevation: 5, 
+        shadowColor: "#000", 
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.25,
         shadowRadius: 4,
@@ -94,7 +86,7 @@ const styles = StyleSheet.create({
     modalText: {
         marginBottom: 15,
         fontSize: 16,
-        textAlign: "center"
+        textAlign: "center",
     }
 });
 
